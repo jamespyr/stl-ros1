@@ -1,0 +1,27 @@
+common:
+  send_point_cloud_ros: true            # true: Send point cloud through ROS or ROS2
+
+lidar:
+  - driver:
+      lidar_type: STELLAR          #  LiDAR type - 
+                                   
+      msop_port: 7000              #  MSOP Msop port of lidar
+      difop_port: 7788             #  DIFOP port of lidar
+
+      #user_layer_bytes: 0          #  Bytes of user layer. thers is no user layer if it is 0         
+      #tail_layer_bytes: 0          #  Bytes of tail layer. thers is no tail layer if it is 0
+
+      min_distance: 2.5            #  Minimum distance (meter) of point cloud
+      max_distance: 300            #  Maximum distance (meter) of point cloud
+      #use_lidar_clock: false       #  true--Use the lidar clock as the message timestamp
+                                   #  false-- Use the system clock as the timestamp
+      
+      #ts_first_point: true         #  true: time-stamp point cloud with the first point; false: with the last point;   
+                                   #  these parameters are used from mechanical lidar
+
+      start_angle: -60             #  Start angle of point cloud
+      end_angle: 60                #  End angle of point cloud
+
+    ros:
+      ros_frame_id: stellar                            #Frame id of packet message and point cloud message
+      #ros_queue_length: 100                            #Topic QoS history depth

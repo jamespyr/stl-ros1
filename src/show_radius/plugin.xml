@@ -1,0 +1,9 @@
+<library path="lib/libshow_radius">
+  <class name="show_radius/PointRadiusTool"
+         type="show_radius::PointRadiusTool"
+         base_class_type="rviz::Tool">
+    <description>
+      通過拖動選擇區域，顯示區域內點雲的點數統計。
+    </description>
+  </class>
+</library>
